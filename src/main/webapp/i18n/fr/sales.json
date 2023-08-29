@@ -1,0 +1,31 @@
+{
+  "jmdReportsApp": {
+    "sales": {
+      "home": {
+        "title": "Sales",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Sales",
+        "createOrEditLabel": "Créer ou éditer un Sales",
+        "notFound": "Aucun Sales trouvé"
+      },
+      "created": "Un nouveau Sales a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Sales avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Sales avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Sales {{ id }} ?"
+      },
+      "detail": {
+        "title": "Sales"
+      },
+      "id": "ID",
+      "prmId": "Prm Id",
+      "unitsDelivered": "Units Delivered",
+      "unitsActivation": "Units Activation",
+      "orderCount": "Order Count",
+      "month": "Month",
+      "year": "Year",
+      "timestamp": "Timestamp",
+      "retailer": "Retailer"
+    }
+  }
+}
