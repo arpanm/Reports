@@ -1,20 +1,16 @@
 entity JmdUser {
-    userId String
-    prmId String
-    role JmdRole
-    mobileNumber String
-    class JmdClass
-    name String
+    userId String,
+    prmId String,
+    role JmdRole,
+    mobileNumber String,
+    class JmdClass,
+    name String,
 }
-
- 
 
 enum JmdRole {
     JMDO,
     Retailer
 }
-
- 
 
 enum JmdClass {
     A,
@@ -26,25 +22,20 @@ enum JmdClass {
     D,
     E
 }
+
 relationship ManyToMany {
     JmdUser{retailer} to JmdUser{jmdo}
 }
 
- 
-
- 
-
 entity Sales {
-    prmId String
-    unitsDelivered Integer
-    unitsActivation Integer
-    orderCount Integer
-    month Month
-    year Integer
-    timestamp LocalTime
+    prmId String,
+    unitsDelivered Integer,
+    unitsActivation Integer,
+    orderCount Integer,
+    month Month,
+    year Integer,
+    timestamp LocalDate
 }
-
- 
 
 enum Month {
     Jan,
@@ -61,26 +52,23 @@ enum Month {
     Dec
 }
 
- 
-
-relationship OneToOne {
-    JmdUser{retailer} to Sales
+relationship OneToMany {
+    JmdUser{saleData} to Sales{retailer}
 }
-
- 
 
 application {
   config {
-    baseName JmdReport
+    baseName JmdReports
     applicationType monolith
     serverPort 9001
+    devDatabaseType mysql
     prodDatabaseType mysql
     clientFramework react
     clientPackageManager npm
     authenticationType jwt
     buildTool maven
     enableSwaggerCodegen true
-    packageName com.jmd.report
+    packageName com.jmd.reports
   }
   entities *
   dto * with mapstruct
