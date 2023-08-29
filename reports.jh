@@ -71,7 +71,7 @@ relationship OneToOne {
 
 application {
   config {
-    baseName JmdReport
+    baseName Reports
     applicationType monolith
     serverPort 9001
     prodDatabaseType mysql
