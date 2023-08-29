@@ -1,0 +1,15 @@
+{
+  "jmdReportsApp": {
+    "JmdClass": {
+      "null": "",
+      "AClass": "AClass",
+      "APlusClass": "APlusClass",
+      "AStarClass": "AStarClass",
+      "XClass": "XClass",
+      "BClass": "BClass",
+      "CClass": "CClass",
+      "DClass": "DClass",
+      "EClass": "EClass"
+    }
+  }
+}
